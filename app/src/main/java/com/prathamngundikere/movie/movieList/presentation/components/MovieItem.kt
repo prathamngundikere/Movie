@@ -54,7 +54,7 @@ fun MovieItem(
 ) {
     val imageState = rememberAsyncImagePainter(
         model = ImageRequest.Builder(LocalContext.current)
-            .data(MovieApi.IMAGE_BASE_URL + movie.backdrop_path)
+            .data(MovieApi.IMAGE_BASE_URL + movie.poster_path)
             .size(Size.ORIGINAL)
             .build()
     ).state
@@ -104,7 +104,7 @@ fun MovieItem(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(6.dp)
-                    .height(250.dp)
+                    .height(240.dp)
                     .clip(RoundedCornerShape(22.dp)),
                 painter = imageState.painter,
                 contentDescription = movie.title,
@@ -114,7 +114,7 @@ fun MovieItem(
         Spacer(modifier = Modifier.height(6.dp))
         Text(
             modifier = Modifier
-                .padding(start = 26.dp, end = 8.dp),
+                .padding(start = 16.dp, end = 8.dp),
             text = movie.title,
             color = Color.White,
             fontSize = 15.sp,
