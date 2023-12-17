@@ -1,5 +1,6 @@
 package com.prathamngundikere.movie.movieList.data.remote
 
+import com.prathamngundikere.movie.BuildConfig
 import com.prathamngundikere.movie.movieList.data.remote.respond.MovieListDto
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -15,6 +16,6 @@ interface MovieApi {
     companion object {
         const val BASE_URL = "https://api.themoviedb.org/3/"
         const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
-        const val API_KEY = "bead922b1f7f4451cf24bc158bb8d626"
+        const val API_KEY = BuildConfig.API_KEY
     }
 }
