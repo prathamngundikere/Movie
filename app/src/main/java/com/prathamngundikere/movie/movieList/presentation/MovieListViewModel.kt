@@ -69,7 +69,7 @@ class MovieListViewModel @Inject constructor(
                                     popularMovieList = movieListState
                                         .value
                                         .popularMovieList
-                                            + popularList,
+                                            + popularList.shuffled(),
                                     popularMovieListPage = movieListState
                                         .value
                                         .popularMovieListPage + 1
@@ -109,7 +109,7 @@ class MovieListViewModel @Inject constructor(
                                     upcomingMovieList = movieListState
                                         .value
                                         .upcomingMovieList
-                                            + upcomingList,
+                                            + upcomingList.shuffled(),
                                     upcomingMovieListPage = movieListState
                                         .value
                                         .upcomingMovieListPage + 1
